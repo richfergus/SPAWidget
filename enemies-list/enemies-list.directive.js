@@ -1,20 +1,20 @@
 angular.module( "Demo" ).directive(
-	"friendsList",
+	"enemiesList",
 	function() {
 
 		// Return the directive configuration.
 		return({
-			controller: "FriendsListController",
+			controller: "EnemiesListController",
 			link: link,
 			restrict: "A",
-			templateUrl: "friends-list/friends-list.htm"
+			templateUrl: "enemies-list/enemies-list.htm"
 		});
 
 
 		// I bind the JavaScript events to the scope.
 		function link( scope, element, attributes ) {
 
-			console.log( "Friends list directive linking." );
+			console.log( "Enemies list directive linking." );
 
 		}
 
