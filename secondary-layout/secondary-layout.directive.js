@@ -1,20 +1,20 @@
 angular.module( "Demo" ).directive(
-	"friendsList",
+	"secondaryLayout",
 	function() {
 
 		// Return the directive configuration.
 		return({
-			controller: "FriendsListController",
+			controller: "SecondaryLayoutController",
 			link: link,
 			restrict: "A",
-			templateUrl: "friends-list/friends-list.htm"
+			templateUrl: "secondary-layout/secondary-layout.htm"
 		});
 
 
 		// I bind the JavaScript events to the scope.
 		function link( scope, element, attributes ) {
 
-			console.log( "Friends list directive linking." );
+			console.log( "Secondary layout directive linking." );
 
 		}
 

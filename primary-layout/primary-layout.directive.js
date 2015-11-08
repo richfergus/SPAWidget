@@ -1,4 +1,6 @@
-angular.module( "Demo" ).directive("primaryLayout", function() {
+angular.module( "Demo" ).directive(
+	"primaryLayout",
+	function() {
 
 		// Return the directive configuration.
 		return({
