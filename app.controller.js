@@ -25,6 +25,10 @@
 					$scope.layout = "secondary";
 					console.log($scope.layout);
 				};
+				$scope.showThirdLayout = function() {
+					$scope.layout = "Third";
+					console.log($scope.layout);
+				};
 			});
 		angular.module( "Demo" ).controller("PrimaryLayoutController", function( $scope ) {
 			// Set the browser window title.
@@ -32,6 +36,14 @@
 			// CAUTION: Inherited scope method.
 				$scope.setWindowTitle( "Showing Primary Layout!" );
 			});	
+		angular.module( "Demo" ).controller("SecondaryLayoutController",function( $scope ) {
+					// Set the browser window title.
+					// --
+					// CAUTION: Inherited scope method.
+					$scope.setWindowTitle( "Showing Secondary Layout!" );
+
+				}
+			);
 		angular.module( "Demo" ).directive("primaryLayout", function() {
 		// Return the directive configuration.
 				return({
@@ -45,5 +57,37 @@
 
 					console.log( "Primary layout directive linking." );
 				}
+			});
+		angular.module( "Demo" ).directive("secondaryLayout", function() {
+		// Return the directive configuration.
+				return({
+					controller: "SecondaryLayoutController",
+					link: link,
+					restrict: "A",
+					templateUrl: "secondary-layout/secondary-layout.htm"
+				});
+				// I bind the JavaScript events to the scope.
+				function link( scope, element, attributes ) {
+
+					console.log( "Secondary layout directive linking." );
+
+				}
+
+			});
+		angular.module( "Demo" ).directive("thirdLayout", function() {
+		// Return the directive configuration.
+				return({
+					controller: "SecondaryLayoutController",
+					link: link,
+					restrict: "A",
+					templateUrl: "secondary-layout/secondary-layout.htm"
+				});
+				// I bind the JavaScript events to the scope.
+				function link( scope, element, attributes ) {
+
+					console.log( "Secondary layout directive linking." );
+
+				}
+
 			});
 })();
