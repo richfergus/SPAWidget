@@ -1,7 +1,4 @@
-angular.module( "Demo" ).directive(
-	"enemiesList",
-	function() {
-
+angular.module( "Demo" ).directive("enemiesList", function() {
 		// Return the directive configuration.
 		return({
 			controller: "EnemiesListController",
