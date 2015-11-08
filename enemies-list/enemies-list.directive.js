@@ -12,6 +12,7 @@ angular.module( "Demo" ).directive("enemiesList", function() {
 		function link( scope, element, attributes ) {
 
 			console.log( "Enemies list directive linking." );
+			
 
 		}
 
