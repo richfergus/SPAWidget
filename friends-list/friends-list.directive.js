@@ -9,7 +9,7 @@ angular.module( "angularOutput" ).directive(
 			restrict: "A",
 			templateUrl: "friends-list/friends-list.htm"
 		});
-
+  
 
 		// I bind the JavaScript events to the scope.
 		function link( scope, element, attributes ) {

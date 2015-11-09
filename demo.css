@@ -20,7 +20,7 @@ body.detailed a[ ng-click ] {
 	color: gold ;
 	cursor: pointer ;
 	text-decoration: underline ;
-}
+}   
 
 p.legal {
 	font-size: 14px ;
