@@ -1,4 +1,4 @@
-angular.module( "Demo" ).controller(
+angular.module( "angularOutput" ).controller(
 	"EnemiesListController",
 	function( $scope ) {
 

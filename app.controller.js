@@ -1,9 +1,9 @@
 (function(){
-  	angular.module('Demo', []);
+  	angular.module('angularOutput', []);
 })();
 (function(){	
 	// main view
-		angular.module('Demo').controller("AppController", function( $scope ) {
+		angular.module('angularOutput').controller("AppController", function( $scope ) {
 				// I am the title display in the browser window.
 				$scope.windowTitle = "Loading... simmer down now!";
 				// I determine which layout component is being included.
@@ -30,13 +30,13 @@
 					console.log($scope.layout);
 				};
 			});
-		angular.module( "Demo" ).controller("MainLayoutController", function( $scope ) {
+		angular.module( "angularOutput" ).controller("MainLayoutController", function( $scope ) {
 			// Set the browser window title.
 			// --
 			// CAUTION: Inherited scope method.
 				$scope.setWindowTitle( "Showing Main Layout!" );
 			});	
-		angular.module( "Demo" ).controller("DetailedLayoutController",function( $scope ) {
+		angular.module( "angularOutput" ).controller("DetailedLayoutController",function( $scope ) {
 					// Set the browser window title.
 					// --
 					// CAUTION: Inherited scope method.
@@ -44,7 +44,7 @@
 
 				}
 			);
-		angular.module( "Demo" ).directive("mainLayout", function() {
+		angular.module( "angularOutput" ).directive("mainLayout", function() {
 		// Return the directive configuration.
 				return({
 					controller: "MainLayoutController",
@@ -58,7 +58,7 @@
 					console.log( "Main layout directive linking." );
 				}
 			});
-		angular.module( "Demo" ).directive("detailedLayout", function() {
+		angular.module( "angularOutput" ).directive("detailedLayout", function() {
 		// Return the directive configuration.
 				return({
 					controller: "DetailedLayoutController",
@@ -74,7 +74,7 @@
 				}
 
 			});
-		angular.module( "Demo" ).directive("thirdLayout", function() {
+		angular.module( "angularOutput" ).directive("thirdLayout", function() {
 		// Return the directive configuration.
 				return({
 					controller: "DetailedLayoutController",

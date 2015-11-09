@@ -1,4 +1,4 @@
-angular.module( "Demo" ).directive(
+angular.module( "angularOutput" ).directive(
 	"friendsList",
 	function() {
 
