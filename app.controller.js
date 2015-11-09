@@ -2,12 +2,12 @@
   	angular.module('Demo', []);
 })();
 (function(){	
-	// primary view
+	// main view
 		angular.module('Demo').controller("AppController", function( $scope ) {
 				// I am the title display in the browser window.
 				$scope.windowTitle = "Loading... simmer down now!";
 				// I determine which layout component is being included.
-				$scope.layout = "primary";
+				$scope.layout = "main";
 				// ---
 				// PUBLIC METHODS.
 				// ---
@@ -15,14 +15,14 @@
 				$scope.setWindowTitle = function( title ) {
 					$scope.windowTitle = title;
 				};
-				// I set the current layout to primary.
-				$scope.showPrimaryLayout = function() {
-					$scope.layout = "primary";
+				// I set the current layout to main.
+				$scope.showMainLayout = function() {
+					$scope.layout = "main";
 					console.log($scope.layout);
 				};
-				// I set the current layout to secondary.
-				$scope.showSecondaryLayout = function() {
-					$scope.layout = "secondary";
+				// I set the current layout to detailed.
+				$scope.showDetailedLayout = function() {
+					$scope.layout = "detailed";
 					console.log($scope.layout);
 				};
 				$scope.showThirdLayout = function() {
@@ -30,46 +30,46 @@
 					console.log($scope.layout);
 				};
 			});
-		angular.module( "Demo" ).controller("PrimaryLayoutController", function( $scope ) {
+		angular.module( "Demo" ).controller("MainLayoutController", function( $scope ) {
 			// Set the browser window title.
 			// --
 			// CAUTION: Inherited scope method.
-				$scope.setWindowTitle( "Showing Primary Layout!" );
+				$scope.setWindowTitle( "Showing Main Layout!" );
 			});	
-		angular.module( "Demo" ).controller("SecondaryLayoutController",function( $scope ) {
+		angular.module( "Demo" ).controller("DetailedLayoutController",function( $scope ) {
 					// Set the browser window title.
 					// --
 					// CAUTION: Inherited scope method.
-					$scope.setWindowTitle( "Showing Secondary Layout!" );
+					$scope.setWindowTitle( "Showing Detailed Layout!" );
 
 				}
 			);
-		angular.module( "Demo" ).directive("primaryLayout", function() {
+		angular.module( "Demo" ).directive("mainLayout", function() {
 		// Return the directive configuration.
 				return({
-					controller: "PrimaryLayoutController",
+					controller: "MainLayoutController",
 					link: link,
 					restrict: "A",
-					templateUrl: "primary-layout/primary-layout.htm"
+					templateUrl: "main/main-layout.htm"
 				});
 				// I bind the JavaScript events to the scope.
 				function link( scope, element, attributes ) {
 
-					console.log( "Primary layout directive linking." );
+					console.log( "Main layout directive linking." );
 				}
 			});
-		angular.module( "Demo" ).directive("secondaryLayout", function() {
+		angular.module( "Demo" ).directive("detailedLayout", function() {
 		// Return the directive configuration.
 				return({
-					controller: "SecondaryLayoutController",
+					controller: "DetailedLayoutController",
 					link: link,
 					restrict: "A",
-					templateUrl: "secondary-layout/secondary-layout.htm"
+					templateUrl: "detailed/detailed-layout.htm"
 				});
 				// I bind the JavaScript events to the scope.
 				function link( scope, element, attributes ) {
 
-					console.log( "Secondary layout directive linking." );
+					console.log( "Detailed layout directive linking." );
 
 				}
 
@@ -77,15 +77,15 @@
 		angular.module( "Demo" ).directive("thirdLayout", function() {
 		// Return the directive configuration.
 				return({
-					controller: "SecondaryLayoutController",
+					controller: "DetailedLayoutController",
 					link: link,
 					restrict: "A",
-					templateUrl: "secondary-layout/secondary-layout.htm"
+					templateUrl: "detailed/detailed-layout.htm"
 				});
 				// I bind the JavaScript events to the scope.
 				function link( scope, element, attributes ) {
 
-					console.log( "Secondary layout directive linking." );
+					console.log( "Detailed layout directive linking." );
 
 				}
 

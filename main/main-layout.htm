@@ -2,21 +2,20 @@
 <h1>
 	Replacing ngInclude With Component Directives In AngularJS
 </h1>
-
 <p>
-	This is the <strong>secondary</strong> layout.
-
+	This is the <strong>primary</strong> layout.
 	<!-- 
 		NOTE: For simplicity of the demo (since we're not using URL-based routing), this
 		method is inherited from the app-controller.
 	-->
-	<a ng-click="showPrimaryLayout()">Show primary layout</a>
+	<a ng-click="showDetailedLayout()">Show detailed layout</a>
+	<a ng-click="showThirdLayout()">Show third layout</a>
 </p>
 
 <!-- 
-	From this component (secondary layout), we're going to "include" another component
+	From this component (primary layout), we're going to "include" another component
 	to look at how nested layouts can be achieved without ngInclude. 
 -->
-<div enemies-list>
+<div friends-list>
 	<!-- Content provided by component directive. -->
 </div>

@@ -4,20 +4,19 @@
 </h1>
 
 <p>
-	This is the <strong>primary</strong> layout.
+	This is the <strong>detailed</strong> layout.
 
 	<!-- 
 		NOTE: For simplicity of the demo (since we're not using URL-based routing), this
 		method is inherited from the app-controller.
 	-->
-	<a ng-click="showSecondaryLayout()">Show secondary layout</a>
-	<a ng-click="showThirdLayout()">Show third layout</a>
+	<a ng-click="showMainLayout()">Show main layout</a>
 </p>
 
 <!-- 
-	From this component (primary layout), we're going to "include" another component
+	From this component (detailed layout), we're going to "include" another component
 	to look at how nested layouts can be achieved without ngInclude. 
 -->
-<div friends-list>
+<div enemies-list>
 	<!-- Content provided by component directive. -->
 </div>

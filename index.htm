@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="./demo.css"></link>
 </head>
 <body 
-	ng-class="{ primary: ( layout == 'primary' ), secondary: ( layout == 'secondary' ) }"
+	ng-class="{ main: ( layout == 'main' ), detailed: ( layout == 'detailed' ) }"
 	ng-switch="layout">
 
 	<!--
@@ -16,13 +16,13 @@
 		directive. The component directive will take care of rendering a template and a 
 		controller as well as any other nested components that are relevant.
 	-->
-	<div ng-switch-when="primary" primary-layout>
+	<div ng-switch-when="main" main-layout>
 		<!-- Content provided by component directive. -->
 	</div>
-	<div ng-switch-when="secondary" secondary-layout>
+	<div ng-switch-when="detailed" detailed-layout>
 		<!-- Content provided by component directive. -->
 	</div>
-	<div ng-switch-when="third" secondary-layout>
+	<div ng-switch-when="third" detailed-layout>
 		<!-- Content provided by component directive. -->
 	</div>
 	<p class="legal">
@@ -44,12 +44,5 @@
 	<!-- Friends list component. -->
 	<script type="text/javascript" src="./friends-list/friends-list.controller.js"></script>
 	<script type="text/javascript" src="./friends-list/friends-list.directive.js"></script>
-
-	<!-- Primary Layout component. -->
-
-
-	<!-- Secondary layout component. -->
-
-
 </body>
 </html>
