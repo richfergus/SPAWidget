@@ -10,7 +10,7 @@ angular.module( "angularOutput" ).controller(
 			},
 			{
 				id: 2,
-				name: "Sarah"
+				name: "Sarah" 
 			},
 			{
 				id: 3,
